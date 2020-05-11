@@ -25,12 +25,12 @@ DEMO.list = {
     {
       icon: 'mail',
       iconColor: 'bg-info text-body-reverse',
-      title: '5 new newsletters',
+      title: '5 new Alerts',
       datetime: '1 hour ago'
     }, {
       icon: 'star',
       iconColor: 'bg-warning text-body-reverse',
-      title: 'New collection saved',
+      title: 'New data collection saved',
       datetime: '5 hour ago'
     }, {
       icon: 'add',
@@ -40,25 +40,25 @@ DEMO.list = {
     }, {
       icon: 'delete',
       iconColor: 'bg-danger text-body-reverse',
-      title: 'Member Jason removed',
+      title: 'Company Aventus removed',
       datetime: 'A week ago'
     }
   ],
   messages: [
     {
       avatar: 'assets/images-demo/avatars/1.jpg',
-      title: 'New mail from Jason',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+      title: 'New Data for Stable coins',
+      desc: 'New assets added to Stable coin data',
       datetime: '5 minutes ago'
     }, {
       avatar: 'assets/images-demo/avatars/2.jpg',
-      title: '2 messages from Bella',
-      desc: 'Tempor incididunt ut labore et dolore magna aliqua',
+      title: 'Altcoin removed',
+      desc: 'Jesuscoin no longer available',
       datetime: '15 minutes ago'
     }, {
       avatar: 'assets/images-demo/avatars/4.jpg',
-      title: 'New member Emily joined',
-      desc: 'Ut enim ad minim veniam quis nostrud exercitation',
+      title: 'New Record High in BTC',
+      desc: 'BTC has reached a record volume and asset price',
       datetime: '1 hour ago'
     }
   ],
@@ -66,24 +66,9 @@ DEMO.list = {
     {
       tag: 'WIP',
       tagColor: 'cyan',
-      title: 'Publish version 4.0',
-      desc: 'Ullamco laboris nisi ut aliquip ex ea commodo'
-    }, {
-      tag: 'Stopped',
-      tagColor: 'red',
-      title: 'New material design',
-      desc: 'Duis aute irure dolor in reprehenderit in'
-    }, {
-      tag: 'Waiting',
-      tagColor: '',
-      title: 'Better documentation',
-      desc: 'Cillum dolore eu fugiat nulla pariatur'
-    }, {
-      tag: 'A week past',
-      tagColor: 'green',
-      title: 'Start public beta test',
-      desc: 'Sunt in culpa qui officia deserunt mollit'
-    }
+      title: 'Platform version 2.0 available',
+      desc: 'Novum Data Dashboard Platform 2.0 available, refresh browser if not automatically updated.'
+    },
   ]
 }
 
@@ -138,30 +123,25 @@ DEMO.articles = [
 DEMO.profiles = [
   {
     avatar: 'assets/images-demo/avatars/1.jpg',
-    name: 'Jason Bourne',
+    name: 'T Lewis',
     title: 'Engineer',
-    desc: "I must confess I'm American (I know… nobody's perfect)"
+    desc: ""
   }, {
     avatar: 'assets/images-demo/avatars/2.jpg',
-    name: 'Bella Swan',
-    title: 'Product Manager',
-    desc: 'Love hiking, sailing,  music, dancing, sports.'
+    name: 'D Hendo',
+    title: 'Finance',
+    desc: ''
   }, {
     avatar: 'assets/images-demo/avatars/3.jpg',
-    name: 'Min Chan',
-    title: 'Web Developer',
-    desc: 'I would walk through fire for a good coffee grinder.'
+    name: 'A Captain',
+    title: 'Engineer',
+    desc: ''
   }, {
     avatar: 'assets/images-demo/avatars/4.jpg',
-    name: 'Emily Smith',
-    title: 'Graphic Designer',
-    desc: 'Travel, music, dancing, sports, books, last minute plans, open mind, photography, museum, craziness'
-  }, {
-    avatar: 'assets/images-demo/avatars/5.jpg',
-    name: 'Luna Doe',
-    title: 'UX Designer',
-    desc: 'Enjoy being active, healthy and staying fit.'
-  }
+    name: 'J Son',
+    title: 'Operations',
+    desc: ''
+  },
 ]
 
 // Used on Portfolio,
