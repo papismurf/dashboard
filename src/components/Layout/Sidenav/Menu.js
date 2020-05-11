@@ -183,54 +183,17 @@ class AppMenu extends React.Component {
         <Menu.Item key="/app/calendar">
           <Button className="nav-item" href="#/app/calendar">
             <MaterialIcon icon="calendar_today" />
-            <span className="nav-text">Calendar</span>
+            <span className="nav-text">Reminders</span>
           </Button>
         </Menu.Item>
         <Menu.Divider />
-        <SubMenu
-          key="/app/page"
-          title={<Button className="nav-item"><MaterialIcon icon="pages" /><span className="nav-text">Pages</span></Button>}
-        >
-          { this.getNavMenuItems(PAGES) }
-        </SubMenu>
-        <SubMenu
-          key="/app/ecommerce"
-          title={<Button className="nav-item"><MaterialIcon icon="add_shopping_cart" /><span className="nav-text">eCommerce</span></Button>}
-        >
-          { this.getNavMenuItems(ECOMMERCE) }
-        </SubMenu>
         <SubMenu
           key="/user"
           title={<Button className="nav-item"><MaterialIcon icon="person_outline" /><span className="nav-text">Account</span></Button>}
         >
           { this.getNavMenuItems(USER) }
         </SubMenu>
-        <SubMenu
-          key="/exception"
-          title={<Button className="nav-item"><MaterialIcon icon="error_outline" /><span className="nav-text">Exception</span></Button>}
-        >
-          { this.getNavMenuItems(EXCEPTION) }
-        </SubMenu>
         <Menu.Divider />
-        <SubMenu
-          key="/app/menu"
-          title={<Button className="nav-item"><MaterialIcon icon="sort" /><span className="nav-text">Menu Levels</span></Button>}
-        >
-          <Menu.Item key="level21"><Button className="nav-item" href={DEMO.link}><span>Level 2</span></Button></Menu.Item>
-          <SubMenu
-            key="level22"
-            title={<Button className="nav-item">Level 2</Button>}
-          >
-            <Menu.Item key="level31"><Button className="nav-item" href={DEMO.link}><span>Level 3</span></Button></Menu.Item>
-            <SubMenu
-              key="level32"
-              title={<Button className="nav-item">Level 3</Button>}
-            >
-              <Menu.Item key="level41"><Button className="nav-item" href={DEMO.link}><span>Level 4</span></Button></Menu.Item>
-              <Menu.Item key="level42"><Button className="nav-item" href={DEMO.link}><span>Level 4</span></Button></Menu.Item>
-            </SubMenu>
-          </SubMenu>
-        </SubMenu>
       </Menu>
     )
   }
