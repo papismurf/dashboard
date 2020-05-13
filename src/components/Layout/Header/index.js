@@ -45,7 +45,7 @@ class AppHeader extends React.Component {
       <Header className={classnames('app-header', {
         'header-elevation': headerShadow,
       })}>
-        <div 
+        <div
           className={classnames('app-header-inner', {
             'bg-white': ['11','12','13','14','15','16','21'].indexOf(colorOption) >= 0,
             'bg-dark': colorOption === '31',
@@ -88,14 +88,13 @@ class AppHeader extends React.Component {
                 <a href={DEMO.link} className="list-inline-item"><Badge className="header-badge" badgeContent={11}><MaterialIcon icon="notifications_none" className="header-icon-notification" /></Badge></a>
               </Popover>
               <a className="list-inline-item" href={DEMO.link}>
-                <div 
-                  className="avatar" 
+                <div
+                  className="avatar"
                   aria-owns={anchorEl ? 'app-header-menu' : null}
                   aria-haspopup="true"
                   onClick={this.handleClick}
                 >
-                  <img src="assets/images-demo/g1-sm.jpg" alt="avatar" className="avatar-img" />
-                  <span className="avatar-text d-none d-md-inline">{DEMO.user}</span>
+                  <span className="avatar-text d-none d-md-inline">Signed in</span>
                 </div>
                 <Menu
                   id="app-header-menu"

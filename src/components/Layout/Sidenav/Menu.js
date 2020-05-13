@@ -135,12 +135,6 @@ class AppMenu extends React.Component {
           <Button className="nav-item" href="#/app/dashboard">
             <MaterialIcon icon="dashboard" />
             <span className="nav-text">Dashboard</span>
-          </Button>
-        </Menu.Item>
-        <Menu.Item key="/app/ui-overview">
-          <Button className="nav-item" href="#/app/ui-overview">
-            <MaterialIcon icon="store" />
-            <span className="nav-text">Material UI</span>
             <span className="nav-badge nav-badge-icon badge-right ml-1"><MaterialIcon icon="stars" className="m-0 text-warning" /></span>
           </Button>
         </Menu.Item>

@@ -1,10 +1,10 @@
 const DEMO = {
-  prefix: 'Material ', // note: with space at end
+  prefix: 'Novum ', // note: with space at end
   link: 'javascript:;', // javascript:;
   home: '#/app/dashboard',
   home2: '/app/dashboard',
   productLink: '#/app/dashboard',
-  user: 'Jess',
+  user: 'Logged in User',
   login: '#/user/login',
   signUp: '#/user/sign-up',
   forgotPassword: '#/user/forgot-password',
@@ -46,17 +46,17 @@ DEMO.list = {
   ],
   messages: [
     {
-      avatar: 'assets/images-demo/avatars/1.jpg',
+      avatar: '',
       title: 'New Data for Stable coins',
       desc: 'New assets added to Stable coin data',
       datetime: '5 minutes ago'
     }, {
-      avatar: 'assets/images-demo/avatars/2.jpg',
+      avatar: '',
       title: 'Altcoin removed',
       desc: 'Jesuscoin no longer available',
       datetime: '15 minutes ago'
     }, {
-      avatar: 'assets/images-demo/avatars/4.jpg',
+      avatar: '',
       title: 'New Record High in BTC',
       desc: 'BTC has reached a record volume and asset price',
       datetime: '1 hour ago'
