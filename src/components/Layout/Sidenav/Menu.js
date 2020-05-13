@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Menu } from 'antd';
 import APPCONFIG from 'constants/appConfig';
-import DEMO from 'constants/demoData';
+// import DEMO from 'constants/demoData';
 import { toggleOffCanvasMobileNav } from 'actions/settingsActions';
-import { CARDS, LAYOUTS, FOUNDATION, UIKIT, FORMS, FEEDBACKS, TABELS, CHARTS, PAGES, ECOMMERCE, USER, EXCEPTION } from 'constants/uiComponents';
+import { USER } from 'constants/uiComponents';
 import Button from '@material-ui/core/Button';
 import MaterialIcon from 'components/MaterialIcon';
 
@@ -15,23 +15,11 @@ class AppMenu extends React.Component {
   // list for AccordionNav
   rootMenuItemKeys= [ // without submenu
     '/app/dashboard',
-    '/app/ui-overview',
     '/app/calendar',
   ]
   rootSubmenuKeys = [
-    '/app/layout',
-    '/app/foundation',
-    '/app/card',
-    '/app/ui',
-    '/app/form',
-    '/app/feedback',
-    '/app/table',
-    '/app/chart',
-    '/app/page',
-    '/app/ecommerce',
     '/user',
-    '/exception',
-    '/app/menu'
+
   ];
 
   state = {
