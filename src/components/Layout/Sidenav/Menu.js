@@ -142,37 +142,37 @@ class AppMenu extends React.Component {
           key="/app/layout"
           title={<Button className="nav-item"><MaterialIcon icon="web" /><span className="nav-text">Analysis</span></Button>}
         >
-          { this.getNavMenuItems(LAYOUTS) }
+
         </SubMenu>
         <SubMenu
           key="/app/foundation"
           title={<Button className="nav-item"><MaterialIcon icon="text_fields" /><span className="nav-text">Compare</span></Button>}
         >
-          { this.getNavMenuItems(FOUNDATION) }
+
         </SubMenu>
         <SubMenu
           key="/app/card"
           title={<Button className="nav-item"><MaterialIcon icon="credit_card" /><span className="nav-text">Quick Views</span></Button>}
         >
-          { this.getNavMenuItems(CARDS) }
+
         </SubMenu>
         <SubMenu
           key="/app/ui"
           title={<Button className="nav-item"><MaterialIcon icon="card_giftcard" /><span className="nav-text">Stable Coins</span></Button>}
         >
-          { this.getNavMenuItems(UIKIT) }
+
         </SubMenu>
         <SubMenu
           key="/app/form"
           title={<Button className="nav-item"><MaterialIcon icon="edit" /><span className="nav-text">Latest News</span></Button>}
         >
-          { this.getNavMenuItems(FORMS) }
+
         </SubMenu>
         <SubMenu
           key="/app/feedback"
           title={<Button className="nav-item"><MaterialIcon icon="notifications_none" /><span className="nav-text">Settings</span></Button>}
         >
-          { this.getNavMenuItems(FEEDBACKS) }
+
         </SubMenu>
         <Menu.Item key="/app/calendar">
           <Button className="nav-item" href="#/app/calendar">
