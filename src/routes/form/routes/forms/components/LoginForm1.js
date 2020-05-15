@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import APPCONFIG from 'constants/appConfig';
 import DEMO from 'constants/demoData';
 import { withRouter } from "react-router-dom";
@@ -9,13 +9,19 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import MaterialIcon from 'components/MaterialIcon';
 
-class NormalForm extends React.Component {
-  handleSubmit = (e) => {
+export default function NormalForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
+
+  function handleSubmit(e) {
     e.preventDefault();
-    // console.log(e)
+     console.log(e)
     // this.props.history.push(DEMO.home2);
   }
-  render() {
     return (
       <section className="form-v1-container">
         <h2>Login to Continue</h2>
@@ -45,6 +51,7 @@ class NormalForm extends React.Component {
                 type="password"
                 fullWidth
                 autoComplete="off"
+                value={password}
               />
             </div>
           </div>
@@ -61,7 +68,7 @@ class NormalForm extends React.Component {
             />
           </div>
           <div className="form-group">
-            <Button variant="contained" color="primary" type="submit" className="btn-cta btn-block">
+            <Button variant="contained" color="primary" disabled={} type="submit" className="btn-cta btn-block">
               Log in
             </Button>
           </div>
@@ -70,7 +77,5 @@ class NormalForm extends React.Component {
         <p className="additional-info">Forgot your username or password? <a href={DEMO.forgotPassword}>Reset password</a></p>
       </section>
     );
-  }
 }
 
-export default withRouter(NormalForm);
