@@ -20,7 +20,7 @@ export default function NormalForm() {
   function handleSubmit(e) {
     e.preventDefault();
      console.log(e)
-    // this.props.history.push(DEMO.home2);
+     this.props.history.push(DEMO.home2);
   }
     return (
       <section className="form-v1-container">

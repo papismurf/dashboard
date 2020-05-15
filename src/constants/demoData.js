@@ -1,7 +1,7 @@
 const DEMO = {
   prefix: 'Novum ', // note: with space at end
   link: 'javascript:;', // javascript:;
-  home: '#/app/dashboard',
+  home: '#/user/login',
   home2: '/app/dashboard',
   productLink: '#/app/dashboard',
   user: 'Logged in User',
