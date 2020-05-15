@@ -3,7 +3,7 @@ const DEMO = {
   link: 'javascript:;', // javascript:;
   home: '#/user/login',
   home2: '/app/dashboard',
-  productLink: '#/app/dashboard',
+  productLink: '#/user/login',
   user: 'Logged in User',
   login: '#/user/login',
   signUp: '#/user/sign-up',
