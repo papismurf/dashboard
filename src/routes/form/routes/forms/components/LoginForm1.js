@@ -26,7 +26,7 @@ export default function NormalForm() {
       <section className="form-v1-container">
         <h2>Login to Continue</h2>
         <p className="lead">Welcome back, sign in with your {APPCONFIG.brand} account</p>
-        <form onSubmit={this.handleSubmit} className="form-v1">
+        <form onSubmit={handleSubmit} className="form-v1">
           <div className="form-group">
             <div className="input-group-v1">
               <div className="input-group-icon">
@@ -34,9 +34,12 @@ export default function NormalForm() {
               </div>
               <TextField
                 id="login1-name"
-                label="Name"
+                label="Email"
                 fullWidth
                 autoComplete="off"
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -52,6 +55,7 @@ export default function NormalForm() {
                 fullWidth
                 autoComplete="off"
                 value={password}
+                onChange={e => setPassword(e.target.value)}
               />
             </div>
           </div>
@@ -68,7 +72,7 @@ export default function NormalForm() {
             />
           </div>
           <div className="form-group">
-            <Button variant="contained" color="primary" disabled={} type="submit" className="btn-cta btn-block">
+            <Button variant="contained" color="primary" disabled={!validateForm()} type="submit" className="btn-cta btn-block">
               Log in
             </Button>
           </div>
