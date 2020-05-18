@@ -1,4 +1,5 @@
 import React from 'react';
+import react from '../../assets/react.svg';
 
 const Logo = () => (
   <svg className="logo-img logo-react" viewBox="0 0 3925 3525" version="1.1" xmlns="http://www.w3.org/2000/svg">

@@ -17,10 +17,16 @@ export default function NormalForm() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-     console.log(e)
-     this.props.history.push(DEMO.home2);
+    try {
+
+      alert("Logged In")
+      this.props.history.push(DEMO.home2);
+    } catch {
+      alert(e.message);
+    }
+
   }
     return (
       <section className="form-v1-container">
