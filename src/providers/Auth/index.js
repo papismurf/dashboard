@@ -21,14 +21,7 @@ export default class Auth extends React.Component {
     const headers = new Headers();
     headers.append('access-control-allow-origin', '*');
     let options = new Request.headers({headers: headers});
-    fetch.post(Constants.API_ENDPOINT + '/users/login/', credentials, options)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw  new Error('Something went wrong...');
-        }
-      })
+    axios.post(Constants.API_ENDPOINT + '/users/login/', credentials, options)
       .then(data => this.setState({email: data.email, password: data.password, isLoading: false}))
       .catch(error => this.setState({error, isLoading: false}));
   }

@@ -19,13 +19,13 @@ module.exports = function override(config, env) {
   // Add LESS support
   config = rewireLess.withLoaderOptions({
     javascriptEnabled: true,
-    modifyVars: { 
-      "@primary-color": "#01BCD4", //
+    modifyVars: {
+      "@primary-color": "#688CDD", //
       "@font-family": 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"' ,
       "@text-color": "rgba(0, 0, 0, 0.87)",
       "@border-radius-base": "4px",
-      "@menu-dark-bg": '#343a40',
-      '@menu-dark-submenu-bg': '#2d3238',
+      "@menu-dark-bg": '#41458E',
+      '@menu-dark-submenu-bg': '#6756A4',
       "@layout-header-background": 'transparent',
     },
   })(config, env);

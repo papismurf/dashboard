@@ -3,6 +3,7 @@ import APPCONFIG from 'constants/appConfig';
 import DEMO from 'constants/demoData';
 import { withRouter } from "react-router-dom";
 import Auth from '../../../../../providers/Auth';
+import APIKit, {setClientToken} from "../../../../../providers/APIKit";
 
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -10,25 +11,55 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import MaterialIcon from 'components/MaterialIcon';
 
-export default function NormalForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const initialState = {
+  username: '',
+  password: '',
+  errors: {},
+  isAuthorized: false,
+  isLoading: false,
+  market: '',
+};
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
+export default class NormalForm extends React.Component {
+  state = initialState;
+
+  componentWillUnmount() {}
+
+  onUsernameChange = username => {
+    this.setState({username});
+  };
+
+  onPasswordChange = password => {
+    this.setState({password});
+  };
+
+  onPressLogin() {
+    const {username, password} = this.state;
+    const payload = {username, password};
+    console.log(payload);
+
+    const onSuccess = ({data}) => {
+      // Set JSON Web Token on success
+      setClientToken(data.token);
+      this.setState({isLoading: false, isAuthorized: true});
+    };
+
+    const onFailure = error => {
+      console.log(error && error.response);
+      this.setState({errors: error.response.data, isLoading: false});
+    };
+
+    // Show spinner when call is made
+    this.setState({isLoading: true});
+
+    APIKit.post('/users/login/', payload)
+      .then(onSuccess)
+      .catch(onFailure);
   }
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    try {
+  render() {
 
-      alert("Logged In")
-      this.props.history.push(DEMO.home2);
-    } catch {
-      alert(e.message);
-    }
 
-  }
     return (
       <section className="form-v1-container">
         <h2>Login to Continue</h2>
@@ -37,7 +68,7 @@ export default function NormalForm() {
           <div className="form-group">
             <div className="input-group-v1">
               <div className="input-group-icon">
-                <MaterialIcon icon="account_circle" />
+                <MaterialIcon icon="account_circle"/>
               </div>
               <TextField
                 id="login1-name"
@@ -53,7 +84,7 @@ export default function NormalForm() {
           <div className="form-group">
             <div className="input-group-v1">
               <div className="input-group-icon">
-                <MaterialIcon icon="lock" />
+                <MaterialIcon icon="lock"/>
               </div>
               <TextField
                 id="login1-password"
@@ -79,14 +110,17 @@ export default function NormalForm() {
             />
           </div>
           <div className="form-group">
-            <Button variant="contained" color="primary" disabled={!validateForm()} type="submit" className="btn-cta btn-block">
+            <Button variant="contained" color="primary" disabled={!validateForm()} type="submit"
+                    className="btn-cta btn-block">
               Log in
             </Button>
           </div>
         </form>
         <p className="additional-info">Don't have an account yet? <a href={DEMO.signUp}>Sign up</a></p>
-        <p className="additional-info">Forgot your username or password? <a href={DEMO.forgotPassword}>Reset password</a></p>
+        <p className="additional-info">Forgot your username or password? <a href={DEMO.forgotPassword}>Reset
+          password</a></p>
       </section>
     );
-}
+  }
 
+};
