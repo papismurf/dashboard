@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import APPCONFIG from 'constants/appConfig';
 import DEMO from 'constants/demoData';
 import { withRouter } from "react-router-dom";
+import Auth from '../../../../../providers/Auth';
 
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
