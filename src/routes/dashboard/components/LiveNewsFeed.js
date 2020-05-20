@@ -1,9 +1,9 @@
 import React from 'react';
-import * from
+import * as APIConstants from '../../../constants/Constants';
 import QueueAnim from 'rc-queue-anim';
 import MaterialIcon from 'components/MaterialIcon';
 
-const articles = DEMO.articles;
+const articles = APIConstants.API_ENDPOINT + '/articles/';
 
 
 const Page = () => {
