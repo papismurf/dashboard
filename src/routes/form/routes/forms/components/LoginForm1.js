@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import APPCONFIG from 'constants/appConfig';
 import DEMO from 'constants/demoData';
 import { withRouter } from "react-router-dom";
@@ -10,6 +10,7 @@ import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import MaterialIcon from 'components/MaterialIcon';
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const initialState = {
   username: '',
@@ -58,13 +59,14 @@ export default class NormalForm extends React.Component {
   }
 
   render() {
-
-
+    const {isLoading} = this.state;
     return (
+
       <section className="form-v1-container">
+        <CircularProgress visible={isLoading} />
         <h2>Login to Continue</h2>
         <p className="lead">Welcome back, sign in with your {APPCONFIG.brand} account</p>
-        <form onSubmit={handleSubmit} className="form-v1">
+        <form onSubmit={this.onPressLogin.bind(this)} className="form-v1">
           <div className="form-group">
             <div className="input-group-v1">
               <div className="input-group-icon">
@@ -72,12 +74,17 @@ export default class NormalForm extends React.Component {
               </div>
               <TextField
                 id="login1-name"
-                label="Email"
+                placeholder={"Enter username..."}
+                returnKeyType="next"
                 fullWidth
+                maxLength={256}
                 autoComplete="off"
                 type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                value={this.state.username}
+                onSubmitEditing={event =>
+                  this.passwordInput.wrappedInstance.focus()
+                }
+                onChangeText={this.onUsernameChange(this.username)}
               />
             </div>
           </div>
@@ -92,8 +99,8 @@ export default class NormalForm extends React.Component {
                 type="password"
                 fullWidth
                 autoComplete="off"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
+                value={this.state.password}
+                onChangeText={this.onPasswordChange(this.password)}
               />
             </div>
           </div>
@@ -110,7 +117,7 @@ export default class NormalForm extends React.Component {
             />
           </div>
           <div className="form-group">
-            <Button variant="contained" color="primary" disabled={!validateForm()} type="submit"
+            <Button variant="contained" color="primary" onClick={this.onPressLogin.bind(this)} type="submit"
                     className="btn-cta btn-block">
               Log in
             </Button>
