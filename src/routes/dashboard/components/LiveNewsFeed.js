@@ -1,16 +1,28 @@
 import React from 'react';
-import * as APIConstants from '../../../constants/Constants';
+import axios from 'axios';
+import APIKit from '../../../providers/APIKit';
 import QueueAnim from 'rc-queue-anim';
 import MaterialIcon from 'components/MaterialIcon';
 
-const articles = APIConstants.API_ENDPOINT + '/articles/';
+const initialState = {
+  market: 'market',
+  key: 'key',
+}
+this.key = initialState.key
+this.market = initialState.market
+const articles = axios.get(APIKit.baseURL + '/articles/')
+  .then()
+
+
+
+
 
 
 const Page = () => {
   return(
     <div className="container-fluid no-breadcrumb container-mw-xl chapter">
       <article className="article">
-        <h2 className="article-title">Blog Cards (Grid)</h2>
+        <h2 className="article-title">Latest News</h2>
         <QueueAnim type="bottom" className="ui-animate flex-items-container">
           {
             articles.map((article, i) => (

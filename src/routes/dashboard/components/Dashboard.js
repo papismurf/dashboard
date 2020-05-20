@@ -1,6 +1,6 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
-import KPIsChart from './KPIsChart';
+import LiveNewsFeed from './LiveNewsFeed';
 import AquisitionChart from './AquisitionChart';
 import StatBoxes1 from './StatBoxes1';
 import StatBoxes2 from './StatBoxes2';
@@ -12,7 +12,7 @@ const Main = () => (
     <div className="col-xl-6">
       <div className="box box-default mb-4">
         <div className="box-body" style={{paddingTop: '2rem', paddingBottom: '.5rem'}}>
-          <KPIsChart />
+          <LiveNewsFeed />
         </div>
       </div>
     </div>
