@@ -1,10 +1,11 @@
+/*
 import React from 'react';
 import axios from 'axios';
 import APIKit from '../../../providers/APIKit';
 import QueueAnim from 'rc-queue-anim';
 import MaterialIcon from 'components/MaterialIcon';
 
-/*
+/!*
 const initialState = {
   market: 'blockchain',
   key: '5840e9e52720764bf18c961d5f9efe3672e00332',
@@ -18,7 +19,7 @@ const articles = axios({
   params: {'limit': 20, 'offset': 0, 'market': this.market},
 })
   .then()
-*/
+*!/
 
 
 
@@ -52,3 +53,4 @@ const Page = () => {
 }
 
 export default Page;
+*/
