@@ -68,7 +68,7 @@ class AppHeader extends React.Component {
                 <MaterialIcon icon="menu" className="list-icon" />
               </a>
               <Tooltip placement="bottom" title="Material UI">
-                <a href="#/app/ui-overview" className="list-inline-item d-none d-md-inline-block">
+                <a href="#/app/dashboard" className="list-inline-item d-none d-md-inline-block">
                   <MaterialIcon icon="store" className="list-icon" />
                 </a>
               </Tooltip>
