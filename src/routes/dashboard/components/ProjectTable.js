@@ -68,26 +68,21 @@ class MultipleSelect extends React.Component {
     return (
       <div className={classes.root}>
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="select-multiple">Sector</InputLabel>
+          <InputLabel htmlFor="select-multiple-checkbox">Sector</InputLabel>
           <Select
             multiple
             value={this.state.name}
             onChange={this.handleChange}
-            input={<Input id="select-multiple" />}
+            input={<Input id="select-multiple-checkbox" />}
+            renderValue={selected => selected.join(', ')}
             MenuProps={MenuProps}
           >
             {names.map(name => (
               <MenuItem
                 key={name}
-                value={name}
-                style={{
-                  fontWeight:
-                    this.state.name.indexOf(name) === -1
-                      ? theme.typography.fontWeightRegular
-                      : theme.typography.fontWeightMedium,
-                }}
-              >
-                {name}
+                value={name}>
+                <Checkbox checked={this.state.name.indexOf(name) > -1} />
+                <ListItemText primary={name} />
               </MenuItem>
             ))}
           </Select>
@@ -111,31 +106,19 @@ class MultipleSelect extends React.Component {
           </Select>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="select-multiple-chip">Investment</InputLabel>
+          <InputLabel htmlFor="select-multiple-checkbox">Investment</InputLabel>
           <Select
             multiple
             value={this.state.name}
             onChange={this.handleChange}
-            input={<Input id="select-multiple-chip" />}
-            renderValue={selected => (
-              <div className={classes.chips}>
-                {selected.map(value => <Chip key={value} label={value} className={classes.chip} />)}
-              </div>
-            )}
+            input={<Input id="select-multiple-checkbox" />}
+            renderValue={selected => selected.join(', ')}
             MenuProps={MenuProps}
           >
             {names.map(name => (
-              <MenuItem
-                key={name}
-                value={name}
-                style={{
-                  fontWeight:
-                    this.state.name.indexOf(name) === -1
-                      ? theme.typography.fontWeightRegular
-                      : theme.typography.fontWeightMedium,
-                }}
-              >
-                {name}
+              <MenuItem key={name} value={name}>
+                <Checkbox checked={this.state.name.indexOf(name) > -1} />
+                <ListItemText primary={name} />
               </MenuItem>
             ))}
           </Select>
