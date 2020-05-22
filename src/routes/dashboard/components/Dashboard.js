@@ -31,8 +31,6 @@ const Dashboard = () => (
 
     <QueueAnim type="bottom" className="ui-animate">
       <div key="1"><Main /></div>
-      <div key="2"><StatBoxes1 /></div>
-      <div key="3"><StatBoxes2 /></div>
       <div key="4"><ProjectTable /></div>
     </QueueAnim>
 
