@@ -8,10 +8,10 @@ const APPCONFIG = {
   customizer: false,                   // Boolean: true, false. Customizer will be removed completely when set to false
   showCustomizer: false,              // Boolean: true, false. Customizer will be opened (visible) first time app was loaded if set to true
   color: {
-    primary: '#00BCD4',
+    primary: '#6887d8',
     success: '#8BC34A',
-    info: '#66BB6A',
-    infoAlt: '#7E57C2',
+    info: '#947bd7',
+    infoAlt: '#63bbcf',
     warning: '#FFCA28',
     danger: '#F44336',
     text: '#3D4051',
