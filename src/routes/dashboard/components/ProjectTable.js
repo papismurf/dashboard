@@ -8,7 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import ListItemText from '@material-ui/core/ListItemText';
 import Select from '@material-ui/core/Select';
 import Checkbox from '@material-ui/core/Checkbox';
-import Chip from '@material-ui/core/Chip';
+import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   root: {
@@ -24,12 +24,9 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
   },
-  chip: {
-    margin: theme.spacing.unit / 4,
-  },
 });
 
-const ITEM_HEIGHT = 48;
+const ITEM_HEIGHT = 36;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
@@ -122,6 +119,9 @@ class MultipleSelect extends React.Component {
               </MenuItem>
             ))}
           </Select>
+          <div>
+          <Button size="small" className={classes.button} color="primary"> Apply </Button>
+          </div>
         </FormControl>
       </div>
     );
