@@ -119,10 +119,10 @@ class MultipleSelect extends React.Component {
               </MenuItem>
             ))}
           </Select>
-          <div>
-          <Button size="small" className={classes.button} color="primary"> Apply </Button>
-          </div>
         </FormControl>
+        <Button variant="contained" size="small" color="primary" className={classes.button}>
+          Small
+        </Button>
       </div>
     );
   }

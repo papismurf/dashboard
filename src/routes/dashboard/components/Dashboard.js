@@ -1,10 +1,11 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import LiveNewsFeed from './LiveNewsFeed';
+import BarDataChart from './BarDataChart';
 import CompanyBreakdownChart from './CompanyBreakdownChart';
 import StatBoxes1 from './StatBoxes1';
 import StatBoxes2 from './StatBoxes2';
-import ProjectTable from './ProjectTable';
+import ProjectTable from './CompanySpotlight';
 import './styles.scss';
 
 const Main = () => (
@@ -12,7 +13,7 @@ const Main = () => (
     <div className="col-xl-6">
       <div className="box box-default mb-4">
         <div className="box-body" style={{paddingTop: '2rem', paddingBottom: '.5rem'}}>
-          {/*<LiveNewsFeed />*/}
+          <BarDataChart/>
         </div>
       </div>
     </div>
