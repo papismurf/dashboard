@@ -42,7 +42,7 @@ const data = {
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(255,99,132,0.4)',
       hoverBorderColor: 'rgba(203, 212, 162, 1.0)',
-      data: [65, 59, 80, 81, 56, 55, 40, 76, 20, 23, 25]
+      data: [1820, 1072, 569, 539, 193, 271, 234, 204]
     }
   ]
 };
