@@ -43,7 +43,13 @@ const data = {
       hoverBorderColor: 'rgba(203, 212, 162, 1.0)',
       data: [65, 59, 80, 81, 56, 55, 40, 76, 20, 23, 25],
       options: {
-        responsive: true
+        responsive: true,
+        legend: {
+          labels: {
+            fontcolor: 'blue',
+            defaultFontFamily: 'Helvetica',
+          }
+        }
       }
     }
   ]

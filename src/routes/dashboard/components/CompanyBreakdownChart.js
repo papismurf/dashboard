@@ -45,6 +45,13 @@ const data = {
       data: [1820, 1072, 569, 539, 193, 271, 234, 204],
       options: {
         responsive: true,
+        legend: {
+          labels: {
+            fontcolor: 'blue',
+            defaultFontFamily: 'Helvetica',
+          }
+        }
+
       }
     }
   ]
