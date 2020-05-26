@@ -3,6 +3,7 @@ import QueueAnim from 'rc-queue-anim';
 import LiveNewsFeed from './LiveNewsFeed';
 import BarDataChart from './BarDataChart';
 import CompanyBreakdownChart from './CompanyBreakdownChart';
+import SaveFilters from "./SaveFilters";
 import StatBoxes1 from './StatBoxes1';
 import StatBoxes2 from './StatBoxes2';
 import ProjectTable from './CompanySpotlight';
@@ -33,6 +34,8 @@ const Dashboard = () => (
     <QueueAnim type="bottom" className="ui-animate">
       <div key="1"><Main /></div>
       <div key="4"><ProjectTable /></div>
+      <div key="3"><SaveFilters /></div>
+
     </QueueAnim>
 
   </div>
