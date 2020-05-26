@@ -121,7 +121,7 @@ class MultipleSelect extends React.Component {
           </Select>
         </FormControl>
         <Button variant="contained" size="small" color="primary" className={classes.button}>
-          Small
+          Apply
         </Button>
       </div>
     );
@@ -136,10 +136,13 @@ MultipleSelect.propTypes = {
 const MultipleSelect1 = withStyles(styles, { withTheme: true })(MultipleSelect);
 
 const Box = () => (
-  <div className="box box-default">
-    <div className="box-header">Companies in the Spotlight</div>
-    <div className="box-body">
-      <MultipleSelect1 />
+  <div className="col-xl-4">
+    <div className="box box-default mb-6">
+      <div className="box-header">Companies in the Spotlight</div>
+      <div className="box-divider"></div>
+      <div className="box-body">
+        <MultipleSelect1/>
+      </div>
     </div>
   </div>
 )
