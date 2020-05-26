@@ -127,7 +127,7 @@ class AppMenu extends React.Component {
           </Button>
         </Menu.Item>
         <SubMenu
-          key="/app/layout"
+          key="/app/analysis"
           title={<Button className="nav-item"><MaterialIcon icon="web" /><span className="nav-text">Analysis</span></Button>}
         >
 
