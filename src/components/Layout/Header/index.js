@@ -17,6 +17,7 @@ const { Header } = Layout;
 class AppHeader extends React.Component {
   state = {
     anchorEl: null,
+    dropdownAnchorEl: null
   };
 
   handleClick = event => {
@@ -24,6 +25,12 @@ class AppHeader extends React.Component {
   };
   handleClose = () => {
     this.setState({ anchorEl: null });
+  };
+  handleDropdownClick = event => {
+    this.setState({ dropdownAnchorEl: event.currentTarget });
+  };
+  handleDropdownClose = () => {
+    this.setState({ dropdownAnchorEl: null });
   };
 
 
@@ -39,7 +46,7 @@ class AppHeader extends React.Component {
 
   render() {
     const { headerShadow, colorOption, showLogo } = this.props;
-    const { anchorEl } = this.state;
+    const { anchorEl, dropdownAnchorEl } = this.state;
 
     return (
       <Header className={classnames('app-header', {
