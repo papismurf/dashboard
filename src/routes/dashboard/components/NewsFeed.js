@@ -6,9 +6,8 @@ import DEMO from "../../../constants/demoData";
 
 const NewsFeed = () => (
   <article className="article">
-    <h2 className="article-title page-title">News Feed</h2>
     <div className="row">
-      <div className="col-xl-4">
+      <div className="col-xl-6">
         <div className="box box-v1 mb-4">
           <div className="box-header">News Article</div>
           <div className="box-body">

@@ -9,6 +9,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Select from '@material-ui/core/Select';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from "@material-ui/core/Button";
+import DEMO from "../../../constants/demoData";
+import MaterialIcon from "../../../components/MaterialIcon";
 
 const styles = theme => ({
   root: {
@@ -120,9 +122,7 @@ class MultipleSelect extends React.Component {
             ))}
           </Select>
         </FormControl>
-        <Button variant="contained" size="small" color="primary" className={classes.button}>
-          Apply
-        </Button>
+        <Button variant="contained" color="primary" className="btn-w-md"> Apply </Button><div className="divider" />
       </div>
     );
   }
@@ -136,15 +136,20 @@ MultipleSelect.propTypes = {
 const MultipleSelect1 = withStyles(styles, { withTheme: true })(MultipleSelect);
 
 const Box = () => (
-  <div className="col-xl-4">
-    <div className="box box-default mb-6">
-      <div className="box-header">Companies in the Spotlight</div>
-      <div className="box-divider"></div>
-      <div className="box-body">
-        <MultipleSelect1/>
+  <article className="article">
+    <div className="row">
+      <div className="col-xl-6">
+        <div className="box box-v1 mb-6">
+          <div className="box-header">Companies in the Spotlight</div>
+
+          <div className="box-body">
+           <MultipleSelect1/>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 )
 
 export default Box;

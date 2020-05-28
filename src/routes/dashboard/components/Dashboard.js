@@ -9,6 +9,8 @@ import StatBoxes2 from './StatBoxes2';
 import ProjectTable from './CompanySpotlight';
 import Heatmap from "echarts/src/chart/heatmap/HeatmapLayer";
 import './styles.scss';
+import NewsFeed from "./NewsFeed";
+import NewsFeedJumbotron from "./NewsFeedJumbotron";
 
 const Main = () => (
   <div className="row">
@@ -33,7 +35,7 @@ const Dashboard = () => (
   <div className="container-fluid no-breadcrumb page-dashboard">
 
     <QueueAnim type="bottom" className="ui-animate">
-      <div key="1"></div>
+      <div key="1"><NewsFeedJumbotron/></div>
       <div key="2"><Main /></div>
       <div key="4"><ProjectTable /></div>
 {/*
