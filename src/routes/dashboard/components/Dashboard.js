@@ -33,7 +33,8 @@ const Dashboard = () => (
   <div className="container-fluid no-breadcrumb page-dashboard">
 
     <QueueAnim type="bottom" className="ui-animate">
-      <div key="1"><Main /></div>
+      <div key="1"></div>
+      <div key="2"><Main /></div>
       <div key="4"><ProjectTable /></div>
 {/*
       <div key="2"><Heatmap/></div>
