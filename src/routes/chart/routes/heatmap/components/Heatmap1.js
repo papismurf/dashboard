@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import Plot from 'react-plotly.js';
 
@@ -25,3 +26,4 @@ class Heatmap1 extends React.Component {
   }
 }
 
+*/

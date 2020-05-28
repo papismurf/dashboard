@@ -74,16 +74,35 @@ class AppHeader extends React.Component {
               <a href={DEMO.link} className="list-inline-item d-md-none" onClick={this.onToggleOffCanvasMobileNav}>
                 <MaterialIcon icon="menu" className="list-icon" />
               </a>
-              <Tooltip placement="bottom" title="Material UI">
-                <a href="#/app/dashboard" className="list-inline-item d-none d-md-inline-block">
-                  <MaterialIcon icon="store" className="list-icon" />
-                </a>
-              </Tooltip>
             </div>
           </div>
 
           <div className="header-right">
             <div className="list-unstyled list-inline">
+                <a className="list-inline-item" href={DEMO.link}>
+                  <div
+                    className="avatar"
+                    aria-owns={dropdownAnchorEl ? 'app-header-dropdown-1' : null}
+                    aria-haspopup="true"
+                    onClick={this.handleDropdownClick}
+                  >
+                    Market <MaterialIcon icon="expand_more" />
+                  </div>
+                  <Menu
+                    id="app-header-dropdown-1"
+                    className="app-header-dropdown"
+                    anchorEl={dropdownAnchorEl}
+                    open={Boolean(dropdownAnchorEl)}
+                    onClose={this.handleDropdownClose}
+                  >
+                    <MenuItem onClick={this.handleDropdownClose}> <a href={DEMO.link}><MaterialIcon icon="transform" />Blockchain</a> </MenuItem>
+                    <div className="divider divider-solid my-1"></div>
+                    <MenuItem onClick={this.handleDropdownClose}> <a href={DEMO.link}><MaterialIcon icon="memory" />Artificial Intelligence</a> </MenuItem>
+
+                  </Menu>
+                </a>
+
+
               <li className="list-inline-item search-box seach-box-right d-none d-md-inline-block">
                 <div className="search-box-inner">
                   <div className="search-box-icon"><MaterialIcon icon="search" /></div>
