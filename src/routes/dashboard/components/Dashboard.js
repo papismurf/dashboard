@@ -7,6 +7,7 @@ import SaveFilters from "./SaveFilters";
 import StatBoxes1 from './StatBoxes1';
 import StatBoxes2 from './StatBoxes2';
 import ProjectTable from './CompanySpotlight';
+import Heatmap from "echarts/src/chart/heatmap/HeatmapLayer";
 import './styles.scss';
 
 const Main = () => (
@@ -34,6 +35,9 @@ const Dashboard = () => (
     <QueueAnim type="bottom" className="ui-animate">
       <div key="1"><Main /></div>
       <div key="4"><ProjectTable /></div>
+{/*
+      <div key="2"><Heatmap/></div>
+*/}
       <div key="3"><SaveFilters /></div>
 
     </QueueAnim>

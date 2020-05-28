@@ -9,7 +9,7 @@ const Page = () => (
       <h2 className="article-title">Heatmap</h2>
       <QueueAnim type="bottom" className="ui-animate">
         <div key="1" className="mb-3">
-          <Heatmap1 />
+          {/*<Heatmap1 />*/}
         </div>
         <div key="2" className="mb-3">
           <Heatmap2 />
