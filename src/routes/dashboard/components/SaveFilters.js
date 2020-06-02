@@ -1,10 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import IconButton from "@material-ui/core/IconButton";
-import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
 import SaveIcon from "@material-ui/icons/Save";
 import classNames from "classnames";
 
@@ -20,9 +17,6 @@ const styles = theme => ({
     fontSize: 20,
   },
 });
-
-
-
 
 function FilterSelection(props) {
   const { classes } = props;
@@ -44,12 +38,21 @@ FilterSelection.propTypes = {
 const FilterSelection1 = withStyles(styles)(FilterSelection);
 
 const SaveFilters = () => (
-  <div className="box box-default mb-4">
-    <div className="box-header">Apply Filters</div>
-    <div className="box-body py-5 text-center">
-      <FilterSelection1 />
+
+<article className="article">
+  <div className="row">
+    <div className="col-xl-6">
+      <div className="box box-v1 mb-6">
+        <div className="box-header">Apply Filters</div>
+
+        <div className="box-body">
+          <FilterSelection1 />
+        </div>
+
+      </div>
     </div>
   </div>
+</article>
 )
 
 export default SaveFilters;
