@@ -11,6 +11,7 @@ import Heatmap from "echarts/src/chart/heatmap/HeatmapLayer";
 import './styles.scss';
 import NewsFeed from "./NewsFeed";
 import NewsFeedJumbotron from "./NewsFeedJumbotron";
+import SignsLifeGithubChart from "./SignsGithubChart";
 
 const Main = () => (
   <div className="row">
@@ -38,9 +39,9 @@ const Dashboard = () => (
       <div key="1"><NewsFeedJumbotron/></div>
       <div key="2"><Main /></div>
       <div key="4"><ProjectTable /></div>
-{/*
-      <div key="2"><Heatmap/></div>
-*/}
+
+      <div key="2"><SignsLifeGithubChart/></div>
+
       <div key="3"><SaveFilters /></div>
 
     </QueueAnim>

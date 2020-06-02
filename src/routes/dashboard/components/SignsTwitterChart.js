@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import axios from 'axios';
 import Plotly from 'plotly.js'
@@ -43,3 +44,4 @@ const SignsOfLifeTwitter = () => (
 )
 
 export default SignsOfLifeTwitter;
+*/
