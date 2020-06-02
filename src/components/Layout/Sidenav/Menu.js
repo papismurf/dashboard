@@ -128,36 +128,36 @@ class AppMenu extends React.Component {
         </Menu.Item>
         <SubMenu
           key="/app/analysis"
-          title={<Button className="nav-item"><MaterialIcon icon="web" /><span className="nav-text">Analysis</span></Button>}
+          title={<Button className="nav-item" href="#/app/analysis"><MaterialIcon icon="addchart" /><span className="nav-text">Analysis</span></Button>}
         >
 
         </SubMenu>
         <SubMenu
-          key="/app/foundation"
-          title={<Button className="nav-item"><MaterialIcon icon="text_fields" /><span className="nav-text">Compare</span></Button>}
+          key="/app/compare"
+          title={<Button className="nav-item" href="#/app/compare"><MaterialIcon icon="compare" /><span className="nav-text">Compare</span></Button>}
         >
 
         </SubMenu>
         <SubMenu
-          key="/app/card"
+          key="/"
           title={<Button className="nav-item"><MaterialIcon icon="credit_card" /><span className="nav-text">Quick Views</span></Button>}
         >
 
         </SubMenu>
         <SubMenu
-          key="/app/ui"
+          key="/"
           title={<Button className="nav-item"><MaterialIcon icon="card_giftcard" /><span className="nav-text">Stable Coins</span></Button>}
         >
 
         </SubMenu>
         <SubMenu
-          key="/app/form"
+          key="/"
           title={<Button className="nav-item"><MaterialIcon icon="edit" /><span className="nav-text">Latest News</span></Button>}
         >
 
         </SubMenu>
         <SubMenu
-          key="/app/feedback"
+          key="/"
           title={<Button className="nav-item"><MaterialIcon icon="notifications_none" /><span className="nav-text">Settings</span></Button>}
         >
 
