@@ -37,7 +37,7 @@ const SpotlightFilters = () => (
   <div className="row">
     <div className="col-xl-6">
         <div className="box-body" style={{paddingTop: '2rem', paddingBottom: '.5rem'}}>
-          <ProjectTable/>
+
         </div>
     </div>
     <div className="col-xl-6">
@@ -54,9 +54,10 @@ const Dashboard = () => (
     <QueueAnim type="bottom" className="ui-animate">
       <div key="1"><NewsFeedJumbotron/></div>
       <div key="2"><Main /></div>
-      <div key="3"><SpotlightFilters /></div>
-      <div key="4"></div>
-      <div key="1"><SignsGithubChart /></div>
+      <div key="3"><ProjectTable/></div>
+      <div key="4"><SpotlightFilters /></div>
+
+
 
     </QueueAnim>
 
