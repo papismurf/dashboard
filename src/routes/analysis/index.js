@@ -1,3 +1,3 @@
-import Analysis from 'components/Analysis';
+import Analysis from './components/Analysis';
 
 export default Analysis;
