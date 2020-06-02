@@ -3,7 +3,7 @@ import APPCONFIG from 'constants/appConfig';
 import DEMO from 'constants/demoData';
 import { withRouter } from "react-router-dom";
 import Auth from '../../../../../providers/Auth';
-import APIKit, {setClientToken} from "../../../../../providers/APIKit";
+import APIKit from "../../../../../providers/APIKit";
 
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -41,7 +41,7 @@ export default class NormalForm extends React.Component {
 
     const onSuccess = ({data}) => {
       // Set JSON Web Token on success
-      setClientToken(data.token);
+      // setClientToken(data.token);
       this.setState({isLoading: false, isAuthorized: true});
     };
 

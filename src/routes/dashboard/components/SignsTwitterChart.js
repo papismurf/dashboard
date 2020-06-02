@@ -2,18 +2,23 @@ import React from 'react';
 import axios from 'axios';
 import Plotly from 'plotly.js'
 import APIKit from "../../../providers/APIKit";
-import ReactEcharts from "echarts-for-react";
 
 const url = APIKit.defaults.baseURL
 const headers = APIKit.defaults.headers
 
 const getTwitterData = axios.get(url + '/companies/twitter_deltas/', {headers: headers})
-  .then(function(response) {
-    resolve
-  })
+  .then( function(response) {
+    console.log(response);
+  }, (error) => {
+    console.log(error);
+});
 
+const data = [{
+  z: getTwitterData,
+  type: 'surface'
+}];
 
-Plotly.d3.json(url, function(error, getTwitterData) {
+Plotly.d3.json(url, function(error, data) {
   if (error)
     return console.warn(error);
   const layout = {
@@ -30,7 +35,7 @@ Plotly.d3.json(url, function(error, getTwitterData) {
 
 const SignsOfLifeTwitter = () => (
   <div className="box box-default mb-3">
-    <div className="box-header">Polar Heatmap</div>
+    <div className="box-header">Signs of Life Twitter</div>
     <div className="box-body">
 
     </div>
