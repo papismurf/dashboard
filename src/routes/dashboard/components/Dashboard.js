@@ -56,7 +56,7 @@ const Dashboard = () => (
       <div key="2"><Main /></div>
       <div key="3"><SpotlightFilters /></div>
       <div key="4"></div>
-      <div key="1"><SignsGithubChart /></div>
+      <div key="1"></div>
 
     </QueueAnim>
 
