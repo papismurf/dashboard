@@ -19,6 +19,8 @@ class AppMenu extends React.Component {
   ]
   rootSubmenuKeys = [
     '/user',
+    '/app/analysis/',
+    '/app/compare/'
 
   ];
 
