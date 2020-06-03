@@ -79,7 +79,7 @@ class AppHeader extends React.Component {
 
           <div className="header-right">
             <div className="list-unstyled list-inline">
-              <Popover placement="bottomRight" content="" trigger="click" overlayClassName="app-header-popover">
+              <Popover placement="bottomRight" content={<Notifications />} trigger="click" overlayClassName="app-header-popover">
                 <a href={DEMO.link} className="list-inline-item"><Badge className="header-badge" badgeContent="18K+"><MaterialIcon icon="business" className="header-icon-notification" /></Badge></a>
               </Popover>
                 <a className="list-inline-item" href={DEMO.link}>
