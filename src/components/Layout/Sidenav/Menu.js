@@ -148,19 +148,19 @@ class AppMenu extends React.Component {
         </SubMenu>
         <SubMenu
           key="/"
-          title={<Button className="nav-item"><MaterialIcon icon="card_giftcard" /><span className="nav-text">Stable Coins</span></Button>}
+          title={<Button className="nav-item"><MaterialIcon icon="attach_money" /><span className="nav-text">Stable Coins</span></Button>}
         >
 
         </SubMenu>
         <SubMenu
           key="/"
-          title={<Button className="nav-item"><MaterialIcon icon="edit" /><span className="nav-text">Latest News</span></Button>}
+          title={<Button className="nav-item"><MaterialIcon icon="book" /><span className="nav-text">Latest News</span></Button>}
         >
 
         </SubMenu>
         <SubMenu
           key="/"
-          title={<Button className="nav-item"><MaterialIcon icon="notifications_none" /><span className="nav-text">Settings</span></Button>}
+          title={<Button className="nav-item"><MaterialIcon icon="settings" /><span className="nav-text">Settings</span></Button>}
         >
 
         </SubMenu>
