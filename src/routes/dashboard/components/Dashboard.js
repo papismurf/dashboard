@@ -42,8 +42,23 @@ const SpotlightFilters = () => (
     </div>
     <div className="col-xl-6">
         <div className="box-body">
-          <SaveFilters/>
+          {/*<SaveFilters/>*/}
         </div>
+    </div>
+  </div>
+);
+
+const SignsOfLife = () => (
+  <div className="row">
+    <div className="col-xl-6">
+      <div className="box-body" style={{paddingTop: '2rem', paddingBottom: '.5rem'}}>
+        <SignsGithubChart />
+      </div>
+    </div>
+    <div className="col-xl-6">
+      <div className="box-body">
+
+      </div>
     </div>
   </div>
 );
@@ -55,7 +70,7 @@ const Dashboard = () => (
       <div key="1"><NewsFeedJumbotron/></div>
       <div key="2"><Main /></div>
       <div key="3"><SpotlightFilters /></div>
-      <div key="4"></div>
+      <div key="4"><SignsOfLife /></div>
       <div key="1"></div>
 
     </QueueAnim>
