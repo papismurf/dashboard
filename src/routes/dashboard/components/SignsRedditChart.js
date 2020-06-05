@@ -33,6 +33,7 @@ const graphData = {
 class SignsRedditChart extends React.Component {
   render() {
     return (
+      <div className="hero-lead">Social Signs of Traction
       <Plot
         data={[
           {
@@ -94,6 +95,7 @@ class SignsRedditChart extends React.Component {
           }
         }}
       />
+      </div>
     );
   }
 }
