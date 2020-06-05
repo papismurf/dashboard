@@ -22,9 +22,9 @@ const graphData = {
   ],
   masterGraph: {
     title: "Key Market Breakdown by Number of Companies",
-    xAxis: "Github",
-    yAxis: "Reddit",
-    zAxis: "Twitter"
+    xAxis: "",
+    yAxis: "",
+    zAxis: "Number of Companies"
   }
 };
 

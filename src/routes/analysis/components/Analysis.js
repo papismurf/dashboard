@@ -3,6 +3,7 @@ import QueueAnim from 'rc-queue-anim';
 import TimeSeries from './TimeSeries';
 
 import './styles.scss';
+import MarketRadar from "./MarketRadar";
 
 
 const Main = () => (
@@ -17,7 +18,7 @@ const Main = () => (
     <div className="col-xl-6">
       <div className="box box-default mb-4">
         <div className="box-body">
-
+          <MarketRadar />
         </div>
       </div>
     </div>
