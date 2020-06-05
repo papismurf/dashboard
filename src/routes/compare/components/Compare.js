@@ -10,6 +10,7 @@ const Main = () => (
     <div className="col-xl-6">
       <div className="box box-default mb-4">
         <div className="box-body" style={{paddingTop: '2rem', paddingBottom: '.5rem'}}>
+
         </div>
       </div>
     </div>

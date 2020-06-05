@@ -1,17 +1,15 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
-import LiveNewsFeed from './LiveNewsFeed';
 import BarDataChart from './BarDataChart';
 import CompanyBreakdownChart from './CompanyBreakdownChart';
 import SaveFilters from "./SaveFilters";
-import StatBoxes1 from './StatBoxes1';
-import StatBoxes2 from './StatBoxes2';
 import ProjectTable from './CompanySpotlight';
 import Heatmap from "echarts/src/chart/heatmap/HeatmapLayer";
 import './styles.scss';
-import NewsFeed from "./NewsFeed";
 import NewsFeedJumbotron from "./NewsFeedJumbotron";
 import SignsGithubChart from "./SignsGithubChart";
+import SignsRedditChart from "./SignsRedditChart";
+import SignsTwitterChart from './SignsTwitterChart';
 
 const Main = () => (
   <div className="row">
@@ -25,7 +23,7 @@ const Main = () => (
     <div className="col-xl-6">
       <div className="box box-default mb-4">
         <div className="box-body">
-          <CompanyBreakdownChart/>
+          <SignsTwitterChart/>
         </div>
       </div>
     </div>
@@ -42,7 +40,7 @@ const SpotlightFilters = () => (
     </div>
     <div className="col-xl-6">
         <div className="box-body">
-          {/*<SaveFilters/>*/}
+          <SignsRedditChart />
         </div>
     </div>
   </div>
