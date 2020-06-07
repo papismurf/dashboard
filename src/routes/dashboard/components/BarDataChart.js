@@ -127,7 +127,7 @@ const BarDataChart = () => (
   <div className="box box-default mb-4">
     <div className="box-header">Number of Companies Over Time</div>
     <div className="box-body">
-      <ReactEcharts option={bar4.option} theme={"macarons"} />
+      <ReactEcharts option={bar4.option} theme={"macarons"} opts={{renderer: 'svg'}}/>
     </div>
   </div>
 )
